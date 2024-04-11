@@ -1,9 +1,8 @@
-"use client";
+import Image from "next/image";
 import { useSearchParams } from "next/navigation";
 import { useState, createRef } from "react";
 import { exportComponentAsJPEG } from "react-component-export-image";
 import Draggable from "react-draggable";
-// import Image from "next/image"
 
 function MemeDetail() {
   const searchParams = useSearchParams();
@@ -26,7 +25,7 @@ function MemeDetail() {
           className="flex justify-center items-center flex-col"
           ref={memeRef}
         >
-          <img className="h-80   border-solid border-black " src={memeURL} />
+          <Image className="h-80 border-solid border-black" src={memeURL} />
           <br />
           <Draggable>
             <div>{displayText1}</div>
